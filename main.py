@@ -1012,5 +1012,15 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 
 @app.get("/")
+@app.get("/seguros-de-gastos-medicos.html")
+@app.get("/med-optimo.html")
+@app.get("/med-plus.html")
+@app.get("/med-plus-elite.html")
+@app.get("/plan-mundial.html")
+@app.get("/med-optimo-empresas.html")
+@app.get("/med-plus-empresas.html")
+@app.get("/basicos-estandarizados.html")
+@app.get("/en-caso-de-siniestro.html")
 def serve_index():
     return FileResponse(os.path.join(STATIC_DIR, "index.html"))
+

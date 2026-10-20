@@ -24,6 +24,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadCatalog();
   previewQuoteLive();
   await loadDashboardData();
+
+  const path = window.location.pathname.toLowerCase();
+  const planPathMap = {
+    "/med-optimo.html": "med-optimo",
+    "/med-plus.html": "med-plus",
+    "/med-plus-elite.html": "med-plus-elite",
+    "/plan-mundial.html": "plan-mundial",
+    "/med-optimo-empresas.html": "med-optimo-empresas",
+    "/med-plus-empresas.html": "med-plus-empresas",
+    "/basicos-estandarizados.html": "basicos-estandarizados",
+  };
+  if (planPathMap[path]) {
+    openPlanModal(planPathMap[path]);
+  } else if (path === "/en-caso-de-siniestro.html") {
+    const sinEl = document.getElementById("siniestro-section");
+    if (sinEl) sinEl.scrollIntoView({ behavior: "smooth" });
+  }
 });
 
 async function loadCatalog() {

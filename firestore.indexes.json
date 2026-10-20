@@ -1,0 +1,22 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "quotes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "dateKey", "order": "ASCENDING" },
+        { "fieldPath": "planId", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "quotes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "planId", "order": "ASCENDING" },
+        { "fieldPath": "annualPremium", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

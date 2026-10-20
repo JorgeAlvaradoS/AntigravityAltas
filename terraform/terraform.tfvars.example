@@ -1,0 +1,8 @@
+project_id                  = "ccai-416504"
+region                      = "us-central1"
+firestore_location          = "nam5"
+service_name                = "seguros-atlas-gmm"
+container_image             = "us-central1-docker.pkg.dev/ccai-416504/seguros-atlas-repo/seguros-atlas-gmm:latest"
+vertex_search_location      = "global"
+vertex_search_data_store_id = "seguros-atlas-gmm-ds"
+gemini_model                = "gemini-3.8-flash"
